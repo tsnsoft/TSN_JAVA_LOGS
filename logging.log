@@ -1,14 +1,14 @@
-ноя 29, 2019 12:30:09 PM java_logs.MY_JAVA_CLASS main
+ноя 29, 2019 12:32:32 PM java_logs.MY_JAVA_CLASS main
 INFO: Start
-ноя 29, 2019 12:30:09 PM java_logs.MY_JAVA_CLASS main
+ноя 29, 2019 12:32:32 PM java_logs.MY_JAVA_CLASS main
 INFO: Запись лога с уровнем INFO (информационная)
-ноя 29, 2019 12:30:09 PM java_logs.MY_JAVA_CLASS main
+ноя 29, 2019 12:32:32 PM java_logs.MY_JAVA_CLASS main
 WARNING: Запись лога с уровнем WARNING (Предупреждение)
-ноя 29, 2019 12:30:09 PM java_logs.MY_JAVA_CLASS main
+ноя 29, 2019 12:32:32 PM java_logs.MY_JAVA_CLASS main
 SEVERE: Запись лога с уровнем SEVERE (серъёзная ошибка)
-ноя 29, 2019 12:30:09 PM java_logs.MY_JAVA_CLASS main
+ноя 29, 2019 12:32:32 PM java_logs.MY_JAVA_CLASS main
 INFO: Some message
-ноя 29, 2019 12:30:09 PM java_logs.MY_JAVA_CLASS main
+ноя 29, 2019 12:32:32 PM java_logs.MY_JAVA_CLASS main
 WARNING: Some!
-ноя 29, 2019 12:30:09 PM java_logs.MY_JAVA_CLASS main
+ноя 29, 2019 12:32:32 PM java_logs.MY_JAVA_CLASS main
 INFO: End
