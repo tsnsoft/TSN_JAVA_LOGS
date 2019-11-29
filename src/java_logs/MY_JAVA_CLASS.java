@@ -6,10 +6,10 @@ import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.SimpleFormatter;
 
-public class JAVA_LOGS {
+public class MY_JAVA_CLASS {
 
-    static Logger log4j = Logger.getLogger(JAVA_LOGS.class);
-    static java.util.logging.Logger log = java.util.logging.Logger.getLogger(JAVA_LOGS.class.getName());
+    static Logger log4j = Logger.getLogger(MY_JAVA_CLASS.class);
+    static java.util.logging.Logger log = java.util.logging.Logger.getLogger(MY_JAVA_CLASS.class.getName());
 
     public static void main(String[] args) throws IOException {
         // Технология логирования log4j
