@@ -1,0 +1,14 @@
+2019-12-03 18:24:38 [INFO   ] java_logs.MY_JAVA_CLASS - Start 
+2019-12-03 18:24:38 [INFO   ] java_logs.MY_JAVA_CLASS - Запись лога с уровнем INFO (информационная) 
+2019-12-03 18:24:38 [WARNING] java_logs.MY_JAVA_CLASS - Запись лога с уровнем WARNING (Предупреждение) 
+2019-12-03 18:24:38 [SEVERE ] java_logs.MY_JAVA_CLASS - Запись лога с уровнем SEVERE (серъёзная ошибка) 
+2019-12-03 18:24:38 [INFO   ] java_logs.MY_JAVA_CLASS - Some message 
+2019-12-03 18:24:38 [SEVERE ] java_logs.MY_JAVA_CLASS - My Exception: ERR! 
+2019-12-03 18:24:38 [INFO   ] java_logs.MY_JAVA_CLASS - End 
+2019-12-03 18:24:39 [INFO   ] java_logs.MY_JAVA_CLASS - Start 
+2019-12-03 18:24:39 [INFO   ] java_logs.MY_JAVA_CLASS - Запись лога с уровнем INFO (информационная) 
+2019-12-03 18:24:39 [WARNING] java_logs.MY_JAVA_CLASS - Запись лога с уровнем WARNING (Предупреждение) 
+2019-12-03 18:24:39 [SEVERE ] java_logs.MY_JAVA_CLASS - Запись лога с уровнем SEVERE (серъёзная ошибка) 
+2019-12-03 18:24:39 [INFO   ] java_logs.MY_JAVA_CLASS - Some message 
+2019-12-03 18:24:39 [SEVERE ] java_logs.MY_JAVA_CLASS - My Exception: ERR! 
+2019-12-03 18:24:39 [INFO   ] java_logs.MY_JAVA_CLASS - End 

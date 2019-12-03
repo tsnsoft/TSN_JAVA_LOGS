@@ -2,49 +2,33 @@ package java_logs;
 
 import java.io.IOException;
 import java.util.logging.FileHandler;
+import java.util.logging.Handler;
 import java.util.logging.Level;
 import java.util.logging.SimpleFormatter;
-import org.apache.log4j.Logger;
-
 
 public class MY_JAVA_CLASS {
 
     static {
+        // Установка формата вывода для java.util.logging.SimpleFormatter
         System.setProperty("java.util.logging.SimpleFormatter.format",
-                "%1$tF %1$tT [%4$-7s] %5$s %n");
+                "%1$tF %1$tT [%4$-7s] %3$s - %5$s %n");
+
     }
-    
-//    static {
-//        InputStream stream = MY_JAVA_CLASS.class.getClassLoader().
-//                getResourceAsStream("logging.properties");
-//        try {
-//            LogManager.getLogManager().readConfiguration(stream);
-//            java.util.logging.Logger log = Logger.getLogger(MY_JAVA_CLASS.class.getName());
-//
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
-    
+
+    // Объявление логировцика типа java.util.logging.Logger 
     static java.util.logging.Logger log = java.util.logging.Logger.getLogger(MY_JAVA_CLASS.class.getName());
 
-    static Logger log4j = Logger.getLogger(MY_JAVA_CLASS.class);
+    // Объявление логировцика типа org.apache.log4j.Logger
+    static org.apache.log4j.Logger log4j = org.apache.log4j.Logger.getLogger(MY_JAVA_CLASS.class);
 
     public static void main(String[] args) throws IOException {
-        // Технология логирования log4j
-        log4j.info("Start log4j");
-        log4j.info("Hi Logger info!");
-        log4j.warn("Warrning!");
-        log4j.error("Error!");
-        log4j.fatal("Fatal error!");
-        log4j.info("End log4j");
-        org.apache.log4j.LogManager.shutdown();
-
-        // Технология логирования java.util.logging
-        FileHandler fileHandler = new FileHandler("logging.log", true);
+        // Инициализация логировцика типа java.util.logging.Logger 
+        // с файлом не более 100 КБ и не более 3 файлов-логов с дозаписью логов
+        Handler fileHandler = new FileHandler("logging.log", 100 *  1024, 3, true);
         fileHandler.setFormatter(new SimpleFormatter());
         log.addHandler(fileHandler);
 
+        // Технология логирования java.util.logging
         log.setLevel(Level.ALL);
         log.info("Start");
         log.log(Level.INFO, "Запись лога с уровнем INFO (информационная)");
@@ -53,13 +37,22 @@ public class MY_JAVA_CLASS {
         log.info("Some message");
 
         try {
-            new Exception("ERR!");
+            throw new Exception("ERR!");
         } catch (Exception ex) {
-            log.log(Level.SEVERE, "Exception: ", ex);
+            log.log(Level.SEVERE, "My Exception: {0}", ex.getMessage());
         }
 
-        log.log(Level.WARNING, "Some!");
         log.info("End");
+        // -----------------------------------------
+
+        // Технология логирования log4j
+        log4j.info("Start log4j");
+        log4j.info("Hi Logger info!");
+        log4j.warn("Warrning!");
+        log4j.error("Error!");
+        log4j.fatal("Fatal error!");
+        log4j.info("End log4j");
+        org.apache.log4j.LogManager.shutdown();
     }
 
 }
