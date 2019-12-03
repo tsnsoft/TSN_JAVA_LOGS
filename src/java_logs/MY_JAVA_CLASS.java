@@ -1,15 +1,34 @@
 package java_logs;
 
-import org.apache.log4j.Logger;
 import java.io.IOException;
 import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.SimpleFormatter;
+import org.apache.log4j.Logger;
+
 
 public class MY_JAVA_CLASS {
 
-    static Logger log4j = Logger.getLogger(MY_JAVA_CLASS.class);
+    static {
+        System.setProperty("java.util.logging.SimpleFormatter.format",
+                "%1$tF %1$tT [%4$-7s] %5$s %n");
+    }
+    
+//    static {
+//        InputStream stream = MY_JAVA_CLASS.class.getClassLoader().
+//                getResourceAsStream("logging.properties");
+//        try {
+//            LogManager.getLogManager().readConfiguration(stream);
+//            java.util.logging.Logger log = Logger.getLogger(MY_JAVA_CLASS.class.getName());
+//
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
+    
     static java.util.logging.Logger log = java.util.logging.Logger.getLogger(MY_JAVA_CLASS.class.getName());
+
+    static Logger log4j = Logger.getLogger(MY_JAVA_CLASS.class);
 
     public static void main(String[] args) throws IOException {
         // Технология логирования log4j
@@ -22,7 +41,7 @@ public class MY_JAVA_CLASS {
         org.apache.log4j.LogManager.shutdown();
 
         // Технология логирования java.util.logging
-        FileHandler fileHandler = new FileHandler("logging.log");
+        FileHandler fileHandler = new FileHandler("logging.log", true);
         fileHandler.setFormatter(new SimpleFormatter());
         log.addHandler(fileHandler);
 
