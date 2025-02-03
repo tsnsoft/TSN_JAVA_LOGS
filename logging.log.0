@@ -19,3 +19,10 @@
 2022-09-22 21:22:44 [INFO   ] java_logs.MY_JAVA_CLASS - Some message 
 2022-09-22 21:22:44 [SEVERE ] java_logs.MY_JAVA_CLASS - My Exception: ERR! 
 2022-09-22 21:22:44 [INFO   ] java_logs.MY_JAVA_CLASS - End 
+2025-02-03 12:06:45 [INFO   ] java_logs.MY_JAVA_CLASS - Start 
+2025-02-03 12:06:45 [INFO   ] java_logs.MY_JAVA_CLASS - Запись лога с уровнем INFO (информационная) 
+2025-02-03 12:06:45 [WARNING] java_logs.MY_JAVA_CLASS - Запись лога с уровнем WARNING (Предупреждение) 
+2025-02-03 12:06:45 [SEVERE ] java_logs.MY_JAVA_CLASS - Запись лога с уровнем SEVERE (серъёзная ошибка) 
+2025-02-03 12:06:45 [INFO   ] java_logs.MY_JAVA_CLASS - Some message 
+2025-02-03 12:06:45 [SEVERE ] java_logs.MY_JAVA_CLASS - My Exception: ERR! 
+2025-02-03 12:06:45 [INFO   ] java_logs.MY_JAVA_CLASS - End 
